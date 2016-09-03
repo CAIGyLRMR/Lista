@@ -1,10 +1,11 @@
-//
-//  Nodo.cpp
-//  ListaFinalHecha
-//
-//  Created by Claudio Ibáñez Garduño on 01/09/16.
-//  Copyright (c) 2016 Claudio Ibáñez Garduño. All rights reserved.
-//
+/*
+Nombres:
+        Luis Rodrigo Montoya Rangel
+        Claudio Alberto Ibañez Garduño
+Descripcion:
+        Programa para agregar elementos, eliminar elementos, buscar elelentos, 
+        eliminar Referencias, Eliminar ultimo elemnto, vaciar y mostrar una lista.
+*/
 
 
 
