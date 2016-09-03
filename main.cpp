@@ -33,7 +33,6 @@ int main()
     std::cout<<" "<<std::endl;
     
     l.BuscarElemento(673);
-    //l.Show();
     std::cout<<" "<<std::endl;
     
     l.AddInicio(98323);
