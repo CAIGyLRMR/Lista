@@ -1,38 +1,46 @@
-//
-//  Lista.cpp
-//  ListaFinalHecha
-//
-//  Created by Claudio Ibáñez Garduño on 01/09/16.
-//  Copyright (c) 2016 Claudio Ibáñez Garduño. All rights reserved.
-//
+
 
 
 #include "Lista.h"
-
+/*
+Constructor crea una lista
+@params: NULL
+@result: NULL
+*/
 Lista::Lista()
 {
     this->H=NULL;
     this->T=NULL;
 }
-
+/*
+Constructor crea una lista
+@params: Dato
+@result: NULL
+*/
 Lista::Lista(int Dato)
 {
     Nodo * aux= new Nodo(Dato);
     this->H=aux;
     this->T=aux;
-    /*std::cout<<H->getDato()<<std::endl;
-     std::cout<<H->getSig()<<std::endl;
-     std::cout<<T->getDato()<<std::endl;
-     std::cout<<T->getSig()<<std::endl;*/
 }
 
+/*
+Método que verifica si la lista esta vacìa
+@params: NULL
+@result: bool (True si la lista está vacía)
+*/
 bool Lista::ListaVacia()
 {
     if (this->H == NULL && this->T == NULL)
         return true;
-    return false;
+    return false;    
 }
 
+/*
+Método para agregar al inicio un elemento
+@params: Dato
+@result: void
+*/
 void Lista::AddInicio(int Dato)
 {
     Nodo* aux = new Nodo(Dato,this->H);
@@ -41,12 +49,13 @@ void Lista::AddInicio(int Dato)
         this->T= aux;
     }
     this->H= aux;
-    /*	std::cout<<H->getDato()<<std::endl;
-     std::cout<<H->getSig()<<std::endl;
-     std::cout<<T->getDato()<<std::endl;
-     std::cout<<T->getSig()<<std::endl;*/
 }
 
+/*
+Método para mostrar la lista
+@params: NULL
+@result: Void
+*/
 void Lista::Show()
 {
     Nodo* aux = this->H;
@@ -57,6 +66,11 @@ void Lista::Show()
     }
 }
 
+/*
+Método que agrega elemento al final de la lista
+@params: Dato
+@result: Void
+*/
 void Lista::AddFinal(int Dato)
 {
     Nodo* aux = new Nodo(Dato);
@@ -69,6 +83,11 @@ void Lista::AddFinal(int Dato)
     this->T=aux;
 }
 
+/*
+Método que Elimina primer elemento de la lista
+@params: NULL
+@result: int Dato
+*/
 int Lista::RemoveInicio()
 {
     if(!ListaVacia())
@@ -87,9 +106,13 @@ int Lista::RemoveInicio()
     }
     std::cout<<"La lista est· vacÌa"<<std::endl;
     return NULL;
-    
 }
 
+/*
+Método para eliminar ultimo elemento de la lista
+@params: NULL
+@result: int Dato
+*/
 int Lista::RemoveFinal()
 {
     if(!ListaVacia())
@@ -117,6 +140,11 @@ int Lista::RemoveFinal()
     return NULL;
 }
 
+/*
+Método para eliminar todos los elementos de la lista
+@params: NULL
+@result: Void
+*/
 void Lista::VaciarLista()
 {
     Nodo* aux=this->H;
@@ -129,6 +157,12 @@ void Lista::VaciarLista()
     this->T=NULL;
     aux=NULL;
 }
+
+/*
+Método para buscar elemento en la lista
+@params: Dato
+@result: Nodo donde se encuentra el Dato
+*/
 Nodo* Lista::BuscarElemento(int Dato)
 {
     Nodo* aux=this->H;
@@ -143,7 +177,6 @@ Nodo* Lista::BuscarElemento(int Dato)
         if (aux->getDato()==Dato)
         {
             std::cout<<"Se encuentra en la posicion: "<<x<<std::endl;
-        
             return aux;
         }
         x++;
@@ -162,6 +195,11 @@ Nodo* Lista::BuscarElemento(int Dato)
     
 }*/
 
+/*
+Método para Remover un elemento de la lista
+@params: Ref
+@result: Void
+*/
 void Lista::RemoveRef(int Ref)
 {
     
